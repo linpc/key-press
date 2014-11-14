@@ -23,6 +23,7 @@ YUI().use('node', 'node-event-simulate', function(Y) {
 		kstr += ('<td>' + ((e.ctrlKey === true) ? 'o' : '&nbsp') + '</td>');
 		kstr += ('<td>' + ((e.altKey === true) ? 'o' : '&nbsp') + '</td>');
 		kstr += ('<td>' + ((e.shiftKey === true) ? 'o' : '&nbsp') + '</td>');
+		kstr += ('<td>' + ((e.metaKey === true) ? 'o' : '&nbsp') + '</td>');
 		kstr += ('<td>' + ((e.metaKey === true && e.keyCode === 91) ? 'o' : '&nbsp') + '</td>');
 		kstr += ('<td>' + ((e.metaKey === true && e.keyCode === 93) ? 'o' : '&nbsp') + '</td>');
 		kstr += ('<td>' + e.keyCode + '</td>');

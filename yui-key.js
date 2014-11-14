@@ -34,5 +34,5 @@ YUI().use('node', 'node-event-simulate', function(Y) {
 		e.stopImmediatePropagation();
 	}
 
-	Y.one('body').on('keydown', ck);
+	Y.one(document).on('keydown', ck);
 });

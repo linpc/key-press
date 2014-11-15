@@ -32,7 +32,7 @@ YUI().use('node', 'node-event-simulate', function(Y) {
 		Y.one('#console table tbody').prepend(kstr);
 		e.preventDefault();
 		e.stopImmediatePropagation();
-	}
+	};
 
 	Y.one(document).on('keydown', ck);
 });

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="https://yui-s.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
+	<script src="yui-propagation.js"></script>
+	<title>Event Propagation</title>
+	<style>
+		#center,#inner,#outer,#container,body {
+			padding: 30px 0 0 30px;
+			margin: 20px 0 0 20px;
+		}
+		#center {
+			width: 300px;
+			height: 50px;
+			border: 10px solid #9c9;
+		}
+		#inner {
+			border: 10px solid #933;
+		}
+		#outer {
+			border: 10px solid #36c;
+		}
+		#container {
+			border: 10px solid #c63;
+		}
+		body {
+			width: 580px;
+			border: 10px solid #cc6;
+		}
+		button {
+			margin: 0 auto;
+		}
+		h4 {
+			display: inline;
+		}
+	</style>
+</head>
+<body>
+	<button>Body</button>
+	<h4 class="evnet">Body event: <span></span></h4>
+	<div id="container">
+		<button>Container</button>
+		<h4 class="evnet">Container event: <span></span></h4>
+		<div id="outer">
+			<button>Outer</button>
+			<h4 class="evnet">Outer event: <span></span></h4>
+			<div id="inner">
+				<button>Inner</button>
+				<h4 class="evnet">Inner event: <span></span></h4>
+				<div id="center">
+					<button>Center</button>
+					<h4 class="evnet">Center event: <span></span></h4>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

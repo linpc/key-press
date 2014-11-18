@@ -6,7 +6,7 @@
 	<script src="yui-propagation.js"></script>
 	<title>Event Propagation</title>
 	<style>
-		#center,#inner,#outer,#container,body {
+		#center,#inner-l,#inner-r,#outer,#container,body {
 			padding: 30px 0 0 30px;
 			margin: 20px 0 0 20px;
 		}
@@ -15,8 +15,13 @@
 			height: 50px;
 			border: 10px solid #9c9;
 		}
-		#inner {
+		#inner-l {
 			border: 10px solid #933;
+		}
+		#inner-r {
+			border: 10px solid #ca6;
+			width: 330px;
+			height: 140px;
 		}
 		#outer {
 			border: 10px solid #36c;
@@ -25,7 +30,7 @@
 			border: 10px solid #c63;
 		}
 		body {
-			width: 580px;
+			width: 960px;
 			border: 10px solid #cc6;
 		}
 		button {
@@ -33,6 +38,16 @@
 		}
 		h4 {
 			display: inline;
+		}
+		.left {
+			float: left;
+		}
+		.right {
+			float: right;
+			margin-left: 0 !important;
+		}
+		.clear {
+			clear: both;
 		}
 	</style>
 </head>
@@ -45,14 +60,20 @@
 		<div id="outer">
 			<button>Outer</button>
 			<h4 class="evnet">Outer event: <span></span></h4>
-			<div id="inner">
-				<button>Inner</button>
-				<h4 class="evnet">Inner event: <span></span></h4>
+			<div class="clear"></div>
+			<div id="inner-l" class="left">
+				<button>Inner Left</button>
+				<h4 class="evnet">Inner Left event: <span></span></h4>
 				<div id="center">
 					<button>Center</button>
 					<h4 class="evnet">Center event: <span></span></h4>
 				</div>
 			</div>
+			<div id="inner-r" class="right">
+				<button>Inner Right</button>
+				<h4 class="evnet">Inner Right event: <span></span></h4>
+			</div>
+			<div class="clear"></div>
 		</div>
 	</div>
 </body>

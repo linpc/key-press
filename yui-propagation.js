@@ -11,8 +11,11 @@ YUI().use('node', 'node-event-simulate', function(Y) {
 		//e.preventDefault();
 		//e.stopImmediatePropagation();
 	},
-	innerK = function (e) {
-		Y.one('#inner>h4>span').set('text', getTime());
+	innerLK = function (e) {
+		Y.one('#inner-l>h4>span').set('text', getTime());
+	},
+	innerRK = function (e) {
+		Y.one('#inner-r>h4>span').set('text', getTime());
 	},
 	outerK = function (e) {
 		Y.one('#outer>h4>span').set('text', getTime());
@@ -32,7 +35,8 @@ YUI().use('node', 'node-event-simulate', function(Y) {
 	});
 
 	Y.one('#center').on('click', centerK);
-	Y.one('#inner').on('click', innerK);
+	Y.one('#inner-l').on('click', innerLK);
+	Y.one('#inner-r').on('click', innerRK);
 	Y.one('#outer').on('click', outerK);
 	Y.one('#container').on('click', containerK);
 	Y.one('body').on('click', bodyK);

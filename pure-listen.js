@@ -1,6 +1,6 @@
 document.onkeydown = function (e) {
 	console.log(e);
-	document.write('');
+	document.write('<br>');
 	document.write('keyCode: ' + e.keyCode + '<br>');
 	document.write('altKey: ' + e.altKey + '<br>');
 	document.write('shiftKey: ' + e.shiftKey + '<br>');
